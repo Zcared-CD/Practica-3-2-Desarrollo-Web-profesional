@@ -1,0 +1,103 @@
+/* IMPORTACIÓN DE FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+/* VARIABLES Y TEMAS */
+:root {
+    --neon-purple: #a855f7;
+    --neon-pink: #ec4899;
+    --dark-bg: #050505;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: #e2e8f0;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.font-tech {
+    font-family: 'Orbitron', sans-serif;
+}
+
+/* FONDO DE PARTÍCULAS */
+#particles-js {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* GLASSMORPHISM */
+.glass-panel {
+    background: rgba(15, 15, 25, 0.7);
+    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(168, 85, 247, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+}
+
+.neon-border {
+    border: 1px solid rgba(236, 72, 153, 0.3);
+    transition: all 0.3s ease;
+}
+
+.neon-border:hover {
+    border-color: var(--neon-pink);
+    box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+/* EFECTOS DE TEXTO Y BOTONES */
+.gradient-text {
+    background: linear-gradient(to right, #ffffff, #f472b6, #a855f7);
+    -webkit-background-clip: text;
+    /* Prefijo primero para evitar advertencias */
+    background-clip: text;
+    /* Estándar después */
+    -webkit-text-fill-color: transparent;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #7e22ce, #db2777);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.6);
+}
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#a855f7, #ec4899);
+    border-radius: 10px;
+}
+
+/* ANIMACIONES */
+.loader {
+    border: 3px solid rgba(168, 85, 247, 0.1);
+    border-top: 3px solid var(--neon-pink);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
